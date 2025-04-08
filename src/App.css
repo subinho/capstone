@@ -52,6 +52,8 @@ main {
   min-height: 100vh;
 }
 
+/* Header */
+
 .logo {
   display: block;
   width: 200px;
@@ -65,6 +67,7 @@ main {
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  padding: 1em;
 }
 
 .nav-list {
@@ -77,4 +80,79 @@ main {
 .nav-list li a {
   text-decoration: none;
   color: inherit; 
+}
+
+/* Hero */
+
+.hero {
+  background-color: #495E57;
+  padding: 4em 2em;
+
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  color: white;
+  /* display: flex; */
+  flex-direction: row;
+  padding: 4em 0;
+  position: relative;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  font-weight: bold;
+  color: #F4CE14 !important;
+}
+
+.hero h3 {
+  font-size: 40px;
+  margin-bottom: 1em;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+
+.hero a {
+  display: block;
+  width: fit-content;
+  padding: .55em .7em;
+  background-color: #F4CE14;
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5%;
+}
+
+.hero-right img {
+  display: block;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Booking */
+
+.booking-container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 10em;
+}
+
+.booking-form {
+  display: grid;
+  min-width: 200px;
+  gap: 20px;
 }
