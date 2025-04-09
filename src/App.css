@@ -42,12 +42,6 @@ table {
 	border-spacing: 0;
 }
 
-footer {
-  max-width: 100%;
-  position: sticky;
-  bottom: 0;
-}
-
 main {
   min-height: 100vh;
 }
@@ -227,17 +221,18 @@ main {
 
 .specials-info a {
   display: inline-block;
+  width: fit-content;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
   color: #F4CE14;
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .3s ease-in-out;
   margin-top: auto;
 }
 
 .specials-info a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #F4CE14;
 }
 
 /* Ratings */
@@ -300,4 +295,113 @@ main {
 .about-images img:nth-child(2) {
   grid-column: 5 / 6;
   grid-row: 1 / 6;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #333333;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 2em;
+}
+
+.footer-logo {
+  display: block;
+  max-height: 120px;
+}
+
+.footer-navigation h4 {
+  font-size: 20px;
+  margin-bottom: .5em;
+}
+
+.footer-navigation-list {
+  line-height: 1.4;
+}
+
+.footer-navigation-list a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .3s ease-in-out;
+}
+
+.footer-navigation-list a:hover {
+  border-bottom: 1px solid white;
+}
+
+.footer-contact h4 {
+  font-size: 20px;
+  margin-bottom: .5em;
+}
+
+.footer-contact-list {
+  line-height: 1.4;
+}
+
+.footer-socials h4 {
+  font-size: 20px;
+  margin-bottom: .5em;
+}
+
+.footer-socials-list {
+  line-height: 1.4;
+}
+
+.footer-socials-list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Confirmation */
+
+.confirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirmation-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.confirmation-info h3 {
+  color: green;
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
+.confirmation-info p {
+  font-size: 18px;
+  color: #5f5959;
+  line-height: 1.2;
+}
+
+.confirmation-info button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }

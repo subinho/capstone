@@ -4,7 +4,7 @@ import SaladImg from "../assets/images/greek-salad.jpg";
 
 const Specials = (props) => {
   return (
-    <section className='specials-container'>
+    <section className='specials-container' id="specials">
         <h2 className='specials-title'>Specials</h2>
         <div className='specials-dish'>
                 {props.menu.map(item => (

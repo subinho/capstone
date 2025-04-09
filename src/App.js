@@ -3,11 +3,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Specials from "./components/Specials";
+import Booking from './components/Booking';
 import Rating from "./components/Rating";
 import About from "./components/About";
 import SaladImg from "./assets/images/greek-salad.jpg"
 import PastaImg from "./assets/images/pasta.jpg"
 import BruchettaImg from "./assets/images/bruchetta.jpg"
+import { Routes, Route } from "react-router-dom";
 
 const menu = [
   {
@@ -43,11 +45,24 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Specials menu={menu} />
-      <About />
+      <main>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Specials menu={menu} />
+              <About />
+            </>
+            } />
+          <Route path="/reservation" element={<Booking />} />
+        {/* <Hero />
+        <Specials menu={menu} />
+        <About /> */}
+        {/* <Booking /> */}
+        </Routes>
+      </main>
       {/* <Rating /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

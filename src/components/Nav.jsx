@@ -4,11 +4,10 @@ const Nav = () => {
   return (
     <nav className='nav'>
         <ul className='nav-list'>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Registration</a></li>
-            <li><a href="#">Order Online</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="/reservation">Reservations</a></li>
+            <li><a href="#about">About</a></li>
         </ul>
     </nav>
   )

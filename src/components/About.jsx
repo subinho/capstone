@@ -4,7 +4,7 @@ import RestaurantOutside from "../assets/images/restaurant-outside.jpg";
 
 const About = () => {
   return (
-    <section className='about-container'>
+    <section className='about-container' id="about">
         <div className="about">
 
             <div className='about-info'>
