@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const seededRandom = function (seed) {
   var m = 2**35 - 31;
@@ -75,29 +77,31 @@ const Booking = () => {
 
   return (
     <div className="booking-container">
-        <form className="booking-form" onSubmit={handleSubmit}>
-            <label for="date">Choose date</label>
-            <input type="date" id="date" name="date" onChange={handleChange} required/>
+        <div className="booking-box">
+          <h2>Table Reservation</h2>
+          <form className="booking-form" onSubmit={handleSubmit}>
+              <label for="date">Choose date</label>
+              <input type="date" id="date" name="date" onChange={handleChange} required/>
 
-            <label for="time">Choose time</label>
-            <select id="time " name="time" onChange={handleChange} disabled={!reservation.date} required>
-             <option value="" disabled selected>Select time</option>
-              {avaibleTimes.map((time, index) => (
-                <option value={time} key={index}>{time}</option>
-              ))}
-            </select>
+              <label for="time">Choose time</label>
+              <select id="time " name="time" onChange={handleChange} disabled={!reservation.date} required>
+              <option value="" disabled selected>Select time</option>
+                {avaibleTimes.map((time, index) => (
+                  <option value={time} key={index}>{time}</option>
+                ))}
+              </select>
 
-            <label for="guests">Number of guests</label>
-            <input
-            type="number"
-            placeholder="1"
-            min="1"
-            max="10"
-            id="guests"
-            name="guests"
-            onChange={handleChange}
-            disabled={!reservation.time}
-            required/>
+              <label for="guests">Number of guests</label>
+              <input
+              type="number"
+              placeholder="1"
+              min="1"
+              max="10"
+              id="guests"
+              name="guests"
+              onChange={handleChange}
+              disabled={!reservation.time}
+              required/>
 
             <label for="occasion">Occasion</label>
             <select id="occasion" name="occasion" onChange={handleChange} disabled={!reservation.guests} required>
@@ -106,21 +110,19 @@ const Booking = () => {
                 <option value="Anniversary">Anniversary</option>
             </select>
 
-            <button type="submit" disabled={!reservation.date || !reservation.time || !reservation.guests || !reservation.occasion}>Make Your reservation</button>
-        </form>
+              <div className="booking-navigation">
+                <button type="button" className="btn-cancel" onClick={() => navigate("/")}>Go Back</button>
+                <button type="submit" className="btn-submit" disabled={!reservation.date || !reservation.time || !reservation.guests || !reservation.occasion}>Make Your reservation</button>
+              </div>
+          </form>
+        </div>
 
         { confirmation &&
           <div className="confirmation">
             <div className="confirmation-info">
               <h3>Reservation confirmed!</h3>
               <p>We are delighted to confirm your reservation at <strong>Little Lemon</strong> on <strong>{new Date(reservation.date).toLocaleDateString()}</strong> at <strong>{reservation.time}</strong>. Your party of <strong>{reservation.guests} guests</strong> will be celebrating a <strong>{reservation.occasion}</strong>, and we look forward to making it a special occasion for you.</p>
-              {/* <ul>
-                <li>Your reservation is {new Date(reservation.date).toLocaleDateString()} at Little Lemon</li>
-                <li>You should be here at {reservation.time}</li>
-                <li>Expecting total of {reservation.guests} guests.</li>
-                <li>You are celebrating a {reservation.occasion}</li>
-              </ul> */}
-              <button type="button" onClick={handleConfirmation}>X</button>
+              <button type="button" onClick={handleConfirmation}><FontAwesomeIcon icon={faXmark} size="2x"/></button>
             </div>
           </div>
         }

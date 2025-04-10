@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react"
+import { HashLink } from "react-router-hash-link";
 
-const Nav = () => {
+const Nav = ({ isOpen, toggleClose }) => {
   return (
-    <nav className='nav'>
-        <ul className='nav-list'>
-            <li><a href="/">Home</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <li><a href="/reservation">Reservations</a></li>
-            <li><a href="#about">About</a></li>
+    <nav className={`nav ${isOpen ? "nav-mobile" : ""}`}>
+        <ul className="nav-list">
+            <li><HashLink smooth to="/" onClick={toggleClose}>Home</HashLink></li>
+            <li><HashLink smooth to="/#specials" onClick={toggleClose}>Specials</HashLink></li>
+            <li><HashLink smooth to="/reservation" onClick={toggleClose}>Reservations</HashLink></li>
+            <li><HashLink smooth to="/#about" onClick={toggleClose}>About</HashLink></li>
         </ul>
     </nav>
   )

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import SaladImg from "../assets/images/greek-salad.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBicycle } from "@fortawesome/free-solid-svg-icons";
 
 const Specials = (props) => {
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handleClick = () => {
+        setShowPopup(!showPopup)
+
+        setTimeout(() => {
+            setShowPopup(false);
+        }, 2000)
+    }
   return (
     <section className='specials-container' id="specials">
         <h2 className='specials-title'>Specials</h2>
@@ -16,7 +26,12 @@ const Specials = (props) => {
                                 <span>${item.price}</span>
                             </div>
                             <p>{item.description}</p>
-                            <Link to="#">Order delivery</Link>
+                            <button type="button" onClick={handleClick}>Order delivery <FontAwesomeIcon icon={faBicycle} size="md"/></button>
+                            {showPopup && (
+                                <div className="specials-popup">
+                                    Order placed!
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}

@@ -1,6 +1,5 @@
 import React from 'react';
-import RestaurantInside from "../assets/images/restaurant-inside.jpg";
-import RestaurantOutside from "../assets/images/restaurant-outside.jpg";
+import { RestaurantInsideImg, RestaurantOutsideImg } from "../assets/images";
 
 const About = () => {
   return (
@@ -19,8 +18,8 @@ const About = () => {
             </div>
 
             <div className='about-images'>
-                <img src={RestaurantInside} alt="" />
-                <img src={RestaurantOutside} alt="" />
+                <img src={RestaurantInsideImg} alt="" />
+                <img src={RestaurantOutsideImg} alt="" />
             </div>
         </div>
     </section>

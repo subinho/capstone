@@ -1,5 +1,6 @@
 import React from 'react'
-import Logo from "../assets/images/small-logo.png";
+import { SmallLogoImg } from "../assets/images";
+import { HashLink } from "react-router-hash-link"
 
 const Footer = () => {
   return (
@@ -7,16 +8,16 @@ const Footer = () => {
       <div className='footer-container'>
         <div>
           <a href="/">
-            <img src={Logo} alt="" className='footer-logo'/>
+            <img src={SmallLogoImg} alt="" className='footer-logo'/>
           </a>
         </div>
         <div className='footer-navigation'>
           <h4>Navigation</h4>
           <ul className='footer-navigation-list'>
-            <li><a href="/">Home</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <li><a href="/reservation">Reservations</a></li>
-            <li><a href="#about">About</a></li>
+            <li><HashLink smooth to="/">Home</HashLink></li>
+            <li><HashLink smooth to="/#specials">Specials</HashLink></li>
+            <li><HashLink smooth to="/reservation">Reservations</HashLink></li>
+            <li><HashLink smooth to="/#about">About</HashLink></li>
           </ul>
         </div>
 
