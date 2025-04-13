@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/capstone/static/css/main.f313cf7d.css",
+    "main.js": "/capstone/static/js/main.17849cbc.js",
+    "static/js/453.7b154009.chunk.js": "/capstone/static/js/453.7b154009.chunk.js",
+    "static/media/pasta.jpg": "/capstone/static/media/pasta.1b9e7c70c3ee76cfa3c0.jpg",
+    "static/media/greek-salad.jpg": "/capstone/static/media/greek-salad.b3b48bb82fcaced0c858.jpg",
+    "static/media/hero.jpg": "/capstone/static/media/hero.8c18e3cf861cd4fa9d0a.jpg",
+    "static/media/bruchetta.jpg": "/capstone/static/media/bruchetta.cc98b69b023d1447eeba.jpg",
+    "static/media/restaurant-inside.jpg": "/capstone/static/media/restaurant-inside.83bfcee8465cb6a6d4f6.jpg",
+    "static/media/restaurant-outside.jpg": "/capstone/static/media/restaurant-outside.e7a658d0d29dc0721a39.jpg",
+    "static/media/small-logo.png": "/capstone/static/media/small-logo.2c859235d6c57bb54176.png",
+    "static/media/logo.jpg": "/capstone/static/media/logo.d4cae6fac8384c2dae04.jpg",
+    "index.html": "/capstone/index.html",
+    "main.f313cf7d.css.map": "/capstone/static/css/main.f313cf7d.css.map",
+    "main.17849cbc.js.map": "/capstone/static/js/main.17849cbc.js.map",
+    "453.7b154009.chunk.js.map": "/capstone/static/js/453.7b154009.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f313cf7d.css",
+    "static/js/main.17849cbc.js"
+  ]
+}
