@@ -4,7 +4,7 @@
 
 The **Little Lemon** is responsive website for small italian restaurant. It allows users to book a table online by selecting a date and avaible time slots, or they can order food online.
 
-Live: https://subinho.github.io/
+Live: https://subinho.github.io/capstone/
 
 ## Images of application
 
